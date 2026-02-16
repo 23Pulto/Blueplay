@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <style>
+        #gameContainer { max-width: 600px; margin: 80px auto; padding: 20px; }
+        #word { text-align: center; font-size: 48px; letter-spacing: 10px; color: #00aaff; margin: 20px 0; font-weight: bold; }
+        #letters { display: grid; grid-template-columns: repeat(6, 1fr); gap: 5px; margin: 20px 0; }
+        .letter-btn { padding: 10px; background: #00aaff; color: black; border: none; border-radius: 5px; cursor: pointer; font-weight: 600; transition: all 0.2s; }
+        .letter-btn:hover { transform: scale(1.05); }
+        .letter-btn:disabled { opacity: 0.5; cursor: default; }
+        #statsContainer { position: fixed; top: 90px; left: 20px; background: #111; border: 2px solid #00aaff; padding: 15px; border-radius: 5px; }
+    </style>
+    <script defer src="../scripts/hangman.js"></script>
+</head>
+<body>
+    <div id="statsContainer">
+        <p>Mistakes: <span id="mistakes">0</span>/6</p>
+        <p>Wins: <span id="wins">0</span></p>
+        <p>High Score: <span id="highScore">0</span></p>
+    </div>
+    <div id="gameContainer">
+        <h2 style="text-align: center; color: #00aaff;">Hangman</h2>
+        <div id="word"></div>
+        <div id="letters"></div>
+        <div style="text-align: center; margin-top: 20px;">
+            <button onclick="newGame()" style="padding: 10px 20px; background: #00aaff; color: black; border: none; border-radius: 5px; cursor: pointer; font-weight: 600;">New Game</button>
+        </div>
+    </div>
+    <button class="back-btn" onclick="window.location.href='../index.html'">Back</button>
+</body>
+</html>

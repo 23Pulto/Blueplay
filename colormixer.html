@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Mixer</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <style>
+        #gameContainer { max-width: 600px; margin: 80px auto; padding: 40px; text-align: center; }
+        #colorDisplay { padding: 40px; margin: 30px 0; border: 3px solid #00aaff; border-radius: 8px; font-size: 18px; color: #00aaff; background: rgba(0,170,255,0.1); }
+    </style>
+    <script defer src="../scripts/colormixer.js"></script>
+</head>
+<body>
+    <div id="statsContainer" style="position: fixed; top: 90px; left: 20px; background: #111; border: 2px solid #00aaff; padding: 15px; border-radius: 5px;">
+        <p style="color: #00aaff; margin: 8px 0; font-size: 14px;">Score: <span id="score">0</span></p>
+        <p style="color: #00aaff; margin: 8px 0; font-size: 14px;">Level: <span id="level">1</span></p>
+        <p style="color: #00aaff; margin: 8px 0; font-size: 14px;">High Score: <span id="highScore">0</span></p>
+    </div>
+    <div id="gameContainer">
+        <h2 style="color: #00aaff;">Color Mixer</h2>
+        <p style="color: #aaa;">Mix colors to match the target!</p>
+        <div id="colorDisplay">RGB(128, 128, 128)</div>
+        <button style="padding: 12px 30px; background: linear-gradient(135deg, #00aaff, #0088dd); color: black; font-weight: 700; border: 2px solid #00aaff; border-radius: 6px; cursor: pointer; font-size: 14px;" onclick="startGame()">START GAME</button>
+    </div>
+    <button class="back-btn" onclick="window.location.href='../index.html'">Back</button>
+</body>
+</html>
