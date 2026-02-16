@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blueplay - 50 Awesome Games Hub">
+    <title>Blueplay - Gaming Hub</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!-- Rain Background -->
+    <canvas id="rainCanvas"></canvas>
+
+    <!-- Sign-Up Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h1>Blueplay</h1>
+            <p>Welcome to the ultimate gaming hub. Enter your name to get started.</p>
+            <input type="text" id="username" placeholder="Enter your name..." />
+            <button id="joinBtn">Join Game Hub</button>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="site-name">BLUEPLAY</div>
+        <div class="welcome-message">Welcome, <span id="userDisplay">Player</span></div>
+    </nav>
+
+    <!-- Settings Panel -->
+    <div id="settingsPanel" class="settings-panel">
+        <div class="settings-header">
+            <h2>Settings</h2>
+            <button class="close-settings" onclick="toggleSettings()">&times;</button>
+        </div>
+
+        <div class="settings-group">
+            <label>Sound Effects</label>
+            <div class="toggle-switch">
+                <input type="checkbox" id="soundToggle" checked>
+                <span id="soundStatus">ON</span>
+            </div>
+        </div>
+
+        <div class="settings-group">
+            <label>Master Volume</label>
+            <div class="slider-container">
+                <input type="range" id="volumeSlider" min="0" max="100" value="70">
+                <span class="slider-value" id="volumeValue">70%</span>
+            </div>
+        </div>
+
+        <div class="settings-divider"></div>
+
+        <div class="settings-group">
+            <label>Visual Effects</label>
+            <div class="toggle-switch">
+                <input type="checkbox" id="vfxToggle" checked>
+                <span id="vfxStatus">ON</span>
+            </div>
+        </div>
+
+        <div class="settings-group">
+            <label>Particle Effects</label>
+            <div class="toggle-switch">
+                <input type="checkbox" id="particlesToggle" checked>
+                <span id="particlesStatus">ON</span>
+            </div>
+        </div>
+
+        <div class="settings-divider"></div>
+
+        <div class="settings-group">
+            <label>Auto-Save Scores</label>
+            <div class="toggle-switch">
+                <input type="checkbox" id="autoSaveToggle" checked>
+                <span id="autoSaveStatus">ON</span>
+            </div>
+        </div>
+
+        <div class="settings-group">
+            <label>Difficulty Boost</label>
+            <div class="toggle-switch">
+                <input type="checkbox" id="difficultyToggle">
+                <span id="difficultyStatus">OFF</span>
+            </div>
+        </div>
+
+        <div class="settings-divider"></div>
+
+        <button class="settings-btn" style="width: 100%; margin-top: 20px; background: rgba(255, 100, 100, 0.2); color: #ff6464; border-color: #ff6464;" onclick="clearAllData()">Clear All Data</button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="search-controls">
+            <div class="search-bar">
+                <input type="text" id="search" placeholder="Search games...">
+            </div>
+            <button class="settings-btn" onclick="toggleSettings()">⚙️ Settings</button>
+        </div>
+
+        <div class="categories">
+            <button class="category-btn active" data-category="all">All Games</button>
+            <button class="category-btn" data-category="action">Action</button>
+            <button class="category-btn" data-category="puzzle">Puzzle</button>
+            <button class="category-btn" data-category="arcade">Arcade</button>
+            <button class="category-btn" data-category="classic">Classic</button>
+            <button class="category-btn" data-category="rhythm">Rhythm</button>
+        </div>
+
+        <div id="gameGrid" class="game-grid"></div>
+    </div>
+
+    <script src="scripts/audio.js" defer></script>
+    <script src="scripts/settings.js" defer></script>
+    <script src="scripts/rain.js" defer></script>
+    <script src="scripts/app.js" defer></script>
+</body>
+
+</html>
