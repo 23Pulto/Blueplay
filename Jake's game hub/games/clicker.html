@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicker Realm</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <style>
+        #gameContainer { max-width: 600px; margin: 80px auto; padding: 20px; display: flex; flex-direction: column; align-items: center; }
+        #clickBtn { width: 200px; height: 200px; border-radius: 50%; background: linear-gradient(135deg, #00aaff, #0077cc); border: 3px solid #00aaff; color: white; font-size: 32px; cursor: pointer; transition: all 0.1s; box-shadow: 0 0 20px #00aaff; margin: 30px 0; }
+        #clickBtn:hover { transform: scale(1.1); box-shadow: 0 0 30px #00aaff; }
+        #clickBtn:active { transform: scale(0.95); }
+        .stats { text-align: center; color: #00aaff; font-size: 24px; margin: 10px 0; }
+        #statsContainer { position: fixed; top: 90px; left: 20px; background: #111; border: 2px solid #00aaff; padding: 15px; border-radius: 5px; }
+    </style>
+    <script defer src="../scripts/clicker.js"></script>
+</head>
+<body>
+    <div id="statsContainer">
+        <p>Clicks: <span id="clickCount">0</span></p>
+        <p>High Score: <span id="highScore">0</span></p>
+    </div>
+    <div id="gameContainer">
+        <h2 style="text-align: center; color: #00aaff;">Clicker Realm</h2>
+        <p style="text-align: center; color: #aaa;">Click as many times as you can!</p>
+        <button id="clickBtn">CLICK ME!</button>
+        <div class="stats">Score: <span id="clickCount">0</span></div>
+    </div>
+    <button class="back-btn" onclick="window.location.href='../index.html'">Back</button>
+</body>
+</html>

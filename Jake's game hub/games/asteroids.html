@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asteroid Dodge</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <style>
+        #gameContainer { position: relative; display: flex; justify-content: center; align-items: center; height: 100vh; }
+        #asteroidsCanvas { background: #000; display: block; border: 2px solid #00aaff; }
+        #ui { position: fixed; top: 90px; left: 20px; background: #111; border: 2px solid #00aaff; padding: 15px; border-radius: 5px; }
+    </style>
+    <script defer src="../scripts/asteroids.js"></script>
+</head>
+<body>
+    <div id="gameContainer">
+        <canvas id="asteroidsCanvas"></canvas>
+    </div>
+    <div id="ui">
+        <p style="color: #00aaff;">Score: <span id="score">0</span></p>
+        <p style="color: #00aaff;">Survival: <span id="time">0</span>s</p>
+        <p style="color: #00aaff;">High Score: <span id="highScore">0</span></p>
+    </div>
+    <button class="back-btn" onclick="window.location.href='../index.html'">Back</button>
+</body>
+</html>

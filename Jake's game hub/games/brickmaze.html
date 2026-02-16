@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brick Maze</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <style>
+        canvas { display: block; background: #0a0a0a; border: 2px solid #00aaff; max-width: 100%; margin: 20px auto; }
+        #statsContainer { position: fixed; top: 90px; left: 20px; background: #111; border: 2px solid #00aaff; padding: 15px; border-radius: 5px; z-index: 1000; }
+        #statsContainer p { color: #00aaff; margin: 8px 0; font-size: 14px; }
+    </style>
+    <script defer src="../scripts/brickmaze.js"></script>
+</head>
+<body>
+    <div id="statsContainer">
+        <p>Score: <span id="score">0</span></p>
+        <p>Level: <span id="level">1</span></p>
+        <p>Best: <span id="highScore">0</span></p>
+    </div>
+    <canvas id="gameCanvas" width="600" height="400"></canvas>
+    <button class="back-btn" onclick="window.location.href='../index.html'">Back</button>
+</body>
+</html>

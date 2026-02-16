@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPG Quest</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <style>
+        canvas { display: block; background: #000; border: 2px solid #00aaff; margin: 80px auto; max-width: 700px; }
+        #statsContainer { position: fixed; top: 90px; left: 20px; background: #111; border: 2px solid #00aaff; padding: 15px; border-radius: 5px; }
+        #statsContainer p { color: #00aaff; margin: 8px 0; font-size: 14px; }
+    </style>
+    <script defer src="../scripts/rpg.js"></script>
+</head>
+<body>
+    <div id="statsContainer">
+        <p>Score: <span id="score">0</span></p>
+        <p>Items: <span id="items">0</span></p>
+        <p>Enemies: <span id="enemies">0</span></p>
+        <p>High Score: <span id="highScore">0</span></p>
+        <p style="font-size: 12px; color: #aaa; margin-top: 10px;">Arrow keys to move</p>
+    </div>
+    <canvas id="rpgCanvas"></canvas>
+    <button class="back-btn" onclick="window.location.href='../index.html'">Back</button>
+</body>
+</html>
